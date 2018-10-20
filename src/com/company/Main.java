@@ -45,12 +45,12 @@ String InputResponse="";
                Random rn = new Random();
                Rand = rn.nextInt(TaxRate.size());
                salesTaxRate = TaxRate.get(Rand);
-               System.out.println(salesTaxRate);
+              // System.out.println(salesTaxRate);
 
                //=========================================================
 
                    itemCost = userInputQuantity * userInputPrice;
-                   totalCost = totalCost + itemCost;
+                   totalCost =totalCost  + itemCost;
                    salesTax = totalCost * salesTaxRate;
                    grandTotal = totalCost + salesTax;
 
@@ -59,6 +59,7 @@ String InputResponse="";
 
                    itemCost = userInputQuantity * userInputPrice;
                    totalCost = totalCost + itemCost;
+                   grandTotal=totalCost;
 
                }
 
@@ -78,14 +79,6 @@ String InputResponse="";
        System.out.println("Item Nme" +  "\t" + "Quantity" + "\t" + "price" + "\t" + "Sub Total" +  "\t" + "Taxable" );
            System.out.println("========================================================================");
 
-        //for (Item tpItem:myItemList) {
-
-
-            //System.out.println(tpItem.getItemName() + "\t" + "\t" + tpItem.getQuantity() + "\t" + tpItem.getPrice() + "\t" + "\t" + "\t" + "\t" + itemCost + "\t" + "\t" + tpItem.isTaxable());
-            // System.out.println("\t");
-
-
-
         for (Item tpItem:myItemList) {
 
 
@@ -94,15 +87,14 @@ String InputResponse="";
 
         }
 
-           System.out.println("\t");
-           System.out.println("Sub Total : "+ totalCost);
+        System.out.println("\t");
+        System.out.println("Sub Total : "+ totalCost);
+        System.out.println("Sales Tax Rate");
         System.out.printf("Sales Tax %.2f ", salesTax);
-        System.out.println("\nGrand total" + grandTotal);
+        System.out.println("\n Grand total " + grandTotal);
 
 
         //-----------------------------------------------------------------------------
-
-
 
     }
 
